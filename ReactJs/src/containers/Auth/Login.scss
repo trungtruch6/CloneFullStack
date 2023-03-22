@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:600|Work+Sans:400,500,600,700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css");
+body {
+  font-family: "work sans";
+}
+.content-wrapper {
+  display: flex;
+  background: linear-gradient(
+    135deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  .content-login {
+    width: 400px;
+    min-height: 400px;
+    background-color: #fff;
+    border-radius: 9px;
+    flex-direction: column;
+    .content-login__header {
+      text-align: center;
+      padding: 10px;
+      font-size: 28px;
+      letter-spacing: 1px;
+      background: linear-gradient(
+        135deg,
+        rgba(34, 193, 195, 1) 0%,
+        rgba(253, 187, 45, 1) 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      min-height: 60px;
+    }
+    .content-login__input {
+      margin: 20px 0;
+      label {
+        font-size: 15px;
+        font-weight: 400;
+        opacity: 0.5;
+        position: relative;
+        left: 30px;
+        margin-bottom: 5px;
+      }
+      input {
+        border-bottom: 3px solid #ced4da;
+        border-top: unset;
+        border-left: unset;
+        border-right: unset;
+        border-radius: unset;
+        font-size: 20px;
+      }
+      input:hover::-webkit-input-placeholder {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      input:focus {
+        box-shadow: 0px 5px 4px 0 rgba(22, 201, 201, 0.84);
+        transition: box-shadow 0.3s ease;
+      }
+    }
+    button {
+      background: linear-gradient(
+        135deg,
+        rgba(34, 193, 195, 1) 0%,
+        rgba(253, 187, 45, 1) 100%
+      );
+      border: none;
+      outline: none;
+      color: #fff;
+      font-size: 18px;
+      padding: 10px 0;
+      margin: 15px auto;
+      border-radius: 10px;
+    }
+    .forgot-password {
+      font-size: 12px;
+      text-align: center;
+      letter-spacing: 1px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    .signin-other {
+      font-size: 18px;
+      text-align: center;
+      margin: 5px 0;
+    }
+    .signin-logo {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 28px;
+      margin: 15px 0;
+      background: linear-gradient(
+        135deg,
+        rgba(34, 193, 195, 1) 0%,
+        rgba(253, 187, 45, 1) 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      cursor: pointer;
+    }
+    .content-login__password {
+      .wrapper-password {
+        position: relative;
+        span {
+          position: absolute;
+          right: 0;
+          top: 0;
+          transform: translateY(50%);
+          padding: 0 5px;
+          cursor: pointer;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+        input:focus + span {
+          opacity: 1;
+        }
+        span:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
