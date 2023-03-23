@@ -21,7 +21,7 @@ let handleLogin = async (req, res) => {
 // Email và password người dùng nhập trùng khớp với dữ liệu từ DB trả về thông tin người dùng
 // trả vè access_token: JWT
 let handleGetAllUser = async (req, res) => {
-  let id = req.body.id;
+  let id = req.query.id; // query paremater sẽ dùng query(?id=).
   if (!id) {
     return res.status(200).json({
       errCode: 1,
