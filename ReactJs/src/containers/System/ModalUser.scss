@@ -1,0 +1,45 @@
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10.5em;
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px !important;
+    .modal-title {
+      margin: unset;
+    }
+    button {
+      background-color: transparent;
+      border: unset;
+      outline: unset;
+      color: #fff;
+      span {
+        font-size: 20px;
+      }
+    }
+  }
+  .modal-content {
+    min-width: 43.75em;
+    .form-row {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-right: -5px;
+      margin-left: -5px;
+      .form-group {
+        margin-bottom: 1rem;
+        &.col-6 {
+          -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+          max-width: 50%;
+          padding-right: 5px;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+}

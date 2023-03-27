@@ -112,9 +112,9 @@ class Login extends Component {
             </div>
             <div className="col-12 signin-other">Or Signin With:</div>
             <div className="col-12 signin-logo">
-              <i class="fa-brands fa-google"></i>
-              <i class="fa-brands fa-facebook-f"></i>
-              <i class="fa-brands fa-twitter"></i>
+              <i className="fa-brands fa-google"></i>
+              <i className="fa-brands fa-facebook-f"></i>
+              <i className="fa-brands fa-twitter"></i>
             </div>
           </div>
         </div>
