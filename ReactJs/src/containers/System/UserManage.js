@@ -6,8 +6,10 @@ import {
   getAllUsers,
   createNewUserService,
   deleteUserService,
+  editUserService,
 } from "../../services/userService";
 import ModalUser from "./ModalUser";
+import ModalEditUser from "./ModalEditUser";
 import { emitter } from "../../utils/Emitter";
 
 class UserManage extends Component {
@@ -16,6 +18,8 @@ class UserManage extends Component {
     this.state = {
       arrUsers: [],
       isOpenModalUser: false,
+      isOpenModalEditUser: false,
+      userEdit: {},
     };
   }
 
@@ -41,6 +45,12 @@ class UserManage extends Component {
   toggleUserModal = () => {
     this.setState({
       isOpenModalUser: !this.state.isOpenModalUser,
+    });
+  };
+
+  toggleEditUserModal = () => {
+    this.setState({
+      isOpenModalEditUser: !this.state.isOpenModalEditUser,
     });
   };
 
@@ -75,6 +85,30 @@ class UserManage extends Component {
     }
   };
 
+  handleEditItem = async (item) => {
+    console.log("Check response: ", item);
+    this.setState({
+      isOpenModalEditUser: true,
+      userEdit: item,
+    });
+  };
+
+  handleDoEditUser = async (item) => {
+    try {
+      let response = await editUserService(item);
+      if (response && response.errCode === 0) {
+        this.setState({
+          isOpenModalEditUser: false,
+        });
+        this.getAllUserService();
+      } else {
+        alert(response.errMessage);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   render() {
     let arrUsers = this.state.arrUsers;
     return (
@@ -84,6 +118,14 @@ class UserManage extends Component {
           toggleUserModal={this.toggleUserModal}
           createNewUser={this.createNewUser}
         />
+        {this.state.isOpenModalEditUser && (
+          <ModalEditUser
+            isOpen={this.state.isOpenModalEditUser}
+            toggleEditUserModal={this.toggleEditUserModal}
+            currentUser={this.state.userEdit}
+            editUser={this.handleDoEditUser}
+          />
+        )}
         <div
           className="container-table-manage text-center p-3"
           style={{ color: "red", fontSize: "20px" }}
@@ -126,7 +168,10 @@ class UserManage extends Component {
                       <td>{item.gender}</td>
                       <td>{item.roleId}</td>
                       <td>
-                        <button className="btn btn-success">
+                        <button
+                          className="btn btn-success"
+                          onClick={() => this.handleEditItem(item)}
+                        >
                           <i className="fa-regular fa-pen-to-square"></i>
                         </button>
                         <button
