@@ -2,8 +2,14 @@ import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import "./UserManage.scss";
-import { getAllUsers, createNewUserService } from "../../services/userService";
+import {
+  getAllUsers,
+  createNewUserService,
+  deleteUserService,
+} from "../../services/userService";
 import ModalUser from "./ModalUser";
+import { emitter } from "../../utils/Emitter";
+
 class UserManage extends Component {
   constructor(props) {
     super(props);
@@ -48,8 +54,22 @@ class UserManage extends Component {
         this.setState({
           isOpenModalUser: false,
         });
+        emitter.emit("EVENT_CLEAR_MODAL_DATA");
       }
       console.log("Check response: ", response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  handleDeleteItem = async (item) => {
+    try {
+      let res = await deleteUserService(item.id);
+      if (res && res.errCode === 0) {
+        await this.getAllUserService();
+      } else {
+        alert(res.errMessage);
+      }
     } catch (error) {
       console.log(error);
     }
@@ -95,7 +115,7 @@ class UserManage extends Component {
               </tr>
               {arrUsers &&
                 arrUsers.map((item, index) => {
-                  console.log(`Check map:`, item, index);
+                  // console.log(`Check map:`, item, index);
                   return (
                     <tr key={index} className="w3-hover-text-green">
                       <td>{item.email}</td>
@@ -109,7 +129,10 @@ class UserManage extends Component {
                         <button className="btn btn-success">
                           <i className="fa-regular fa-pen-to-square"></i>
                         </button>
-                        <button className="btn btn-danger">
+                        <button
+                          className="btn btn-danger"
+                          onClick={() => this.handleDeleteItem(item)}
+                        >
                           <i className="fa-solid fa-trash"></i>
                         </button>
                       </td>

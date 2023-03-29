@@ -5,14 +5,14 @@ let handleLogin = async (req, res) => {
   if (!email || !password) {
     return res.status(500).json({
       errCode: 1,
-      message: "Missing input parameter!",
+      errMessage: "Missing input parameter!",
     });
   }
   let userData = await userService.handleUserLogin(email, password);
   // API trả về status
   return res.status(200).json({
     errCode: userData.errCode,
-    message: userData.errMessage,
+    errMessage: userData.errMessage,
     user: userData.user ? userData.user : {},
   });
 };

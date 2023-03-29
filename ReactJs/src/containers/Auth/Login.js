@@ -18,11 +18,13 @@ class Login extends Component {
     };
   }
   handleOnChangeInputUser = (event) => {
+    console.log("Get user input value: ", event.target.value);
     this.setState({
       username: event.target.value,
     });
   };
   handleOnChangeInputPassword = (event) => {
+    console.log("Get password input value: ", event.target.value);
     this.setState({
       password: event.target.value,
     });
@@ -35,17 +37,18 @@ class Login extends Component {
       let data = await handleLoginAPI(this.state.username, this.state.password);
       if (data && data.errCode !== 0) {
         this.setState({
-          errMessage: data.message,
+          errMessage: data.errMessage,
         });
       }
       if (data && data.errCode === 0) {
         this.props.userLoginSuccess(data.user);
+        console.log(this.props.userLoginSuccess(data.user));
       }
     } catch (error) {
       if (error.response) {
         if (error.response.data) {
           this.setState({
-            errMessage: error.response.data.message,
+            errMessage: error.response.data.errMessage,
           });
         }
       }

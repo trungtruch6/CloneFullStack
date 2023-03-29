@@ -31,7 +31,7 @@ let handleUserLogin = (email, password) => {
           if (check) {
             userData.errCode = 0;
             userData.errMessage = "Success!";
-            console.log(user);
+            // console.log(user);
             delete user.password;
             userData.user = user;
           } else {
