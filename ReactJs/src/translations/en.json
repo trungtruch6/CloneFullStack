@@ -1,4 +1,36 @@
 {
+    "homeheader": {
+        "specialty" : "Specialty",
+        "finđoctor" : "Find a doctor by specialty",
+        "healthfacilities" : "Health facilities",
+        "choosehospitalclinic": "Choose hospital clinic",
+        "doctor" : "Doctor",
+        "gooddoctor" : "Choose a good doctor",
+        "package": "Checkup package",
+        "general": "General health check",
+        "vi": "Vietnamese",
+        "en": "English"
+    },
+    "homesecsion" : {
+        "platform": "PLATFORM MEDICAL",
+        "healthcare" : "COMPREHENSIVE HEALTH CARE",
+        "findspecialty": "Find a specialty",
+        "examination": "Examination",
+        "specialty":"specialty",
+        "remote" : "remote",
+        "general" : "general",
+        "test": "Test",
+        "medical" : {"1": "Medical",
+                     "2": "medical"
+        },
+        "health" : "Health",
+        "mental" : "mental",
+        "dentistry" : "dentistry",
+        "package" : "Package",
+        "surgery": "surgery",
+        "products" : "Products",
+        "business" : "business"
+    },
     "common": {
         "add": "Add",
         "edit": "Edit",

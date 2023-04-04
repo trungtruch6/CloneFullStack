@@ -1,0 +1,131 @@
+@import "../../styles/variables";
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.container-bg {
+  // height: 100vh;
+  background-image: url(../../assets/bookingcare-cover-4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  .content-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.25),
+      rgba(255, 255, 255, 0.1)
+    );
+    padding: 55px 0;
+    .content-bg_header {
+      width: 1170px;
+      h1 {
+        text-align: center;
+        margin: 55px 0;
+        color: $common-text-color;
+        font-size: 32px;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 1px;
+        height: 80px;
+        b {
+          margin: 10px 0;
+          display: inline-block;
+        }
+      }
+      .wrapper-bg-header_sreach {
+        height: 160px;
+        .bg-header_sreach {
+          display: flex;
+          align-items: center;
+          background-color: yellow;
+          height: 50px;
+          width: 40%;
+          margin: 0 auto;
+          border-radius: 30px;
+          .bg-header_inputsreach {
+            background-color: transparent;
+            outline: unset;
+            border: unset;
+            margin-left: 20px;
+          }
+          i {
+            margin-left: 20px;
+          }
+        }
+      }
+      .bg-header_download {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        .link {
+          a {
+            img {
+              width: 108px;
+              height: 32px;
+            }
+          }
+        }
+        .google {
+        }
+        .appstore {
+          a {
+            img {
+              width: 108px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .content-bg_footer {
+    background-image: linear-gradient(
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 1)
+    );
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .bg-footer-selection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 1170px;
+      .bg-footer-s_list {
+        height: 100px;
+        width: 150px;
+        text-align: center;
+        a {
+          text-decoration: none;
+          font-size: 16px;
+          color: #333333;
+          padding: 5px;
+          height: inherit;
+          width: inherit;
+          display: inline-block;
+          font-weight: bold;
+          .img-list-footer {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-position: center;
+            background-size: 32px;
+            background-repeat: no-repeat;
+            background-color: #fff;
+            border: 1px solid #fff;
+            margin: 0 auto;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+          }
+        }
+      }
+    }
+  }
+}

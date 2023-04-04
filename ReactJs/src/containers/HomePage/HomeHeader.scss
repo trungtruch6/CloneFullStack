@@ -1,0 +1,132 @@
+@import "../../styles/variables";
+* {
+  ul {
+    li {
+      list-style-type: none;
+    }
+  }
+}
+.home-header-container {
+  margin: 0;
+  padding: 0;
+  .home-header-content {
+    background-color: $bg-menu-color;
+    height: 4.625rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    // position: fixed;
+    gap: 10px;
+  }
+  .left-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: auto;
+    i {
+      font-size: 1.5rem;
+      padding: 0.625rem;
+    }
+    .main-logo {
+      width: 50%;
+      height: 100%;
+    }
+  }
+  .center-content {
+    display: flex;
+    width: 50%;
+    height: inherit;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0;
+    font-family: $fontmain;
+    .center-content-list {
+      font-size: 0.875rem;
+      display: flex;
+      flex-direction: column;
+      color: $common-text-color-black;
+      span:nth-child(2) {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .right-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: inherit;
+    .right-content-support {
+      cursor: pointer;
+      margin: 0 10px;
+      padding: 15px;
+      i {
+        margin: 0 0.625rem;
+        color: aqua;
+      }
+    }
+    .right-content-language {
+      margin: 0 10px;
+      padding: 15px;
+      width: 3.75rem;
+      height: 1.875rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        i {
+          color: aqua;
+        }
+      }
+      .right-content-language__list {
+        position: relative;
+        width: 9.375rem;
+        height: 3.125rem;
+        padding: 0.313rem;
+        &:hover {
+          .right-content-language__child {
+            display: block;
+            background-color: #fff;
+            min-width: 120px;
+          }
+        }
+        .right-content-language__child {
+          & {
+            .content-language-child__list:hover {
+              color: aqua;
+            }
+            .language-vi {
+              opacity: 0.4;
+              &.action {
+                color: red;
+                opacity: 1;
+              }
+            }
+            .language-en {
+              opacity: 0.4;
+              &.action {
+                color: blue;
+                opacity: 1;
+              }
+            }
+          }
+          display: none;
+          position: absolute;
+          top: 40px;
+          left: -50px;
+          box-shadow: 0 0 10px rgba(127, 137, 161, 0.1);
+          border-bottom: 1px solid #e5e5e5;
+          text-align: center;
+          padding: 0 15px;
+        }
+      }
+      i {
+        position: absolute;
+      }
+    }
+  }
+}

@@ -1,4 +1,35 @@
-{
+{   "homeheader": {
+        "specialty" : "Chuyên Khoa",
+        "finđoctor" : "Tìm bác sĩ theo chuyên khoa",
+        "healthfacilities" : "Cơ sở y tế",
+        "choosehospitalclinic": "Chọn bệnh viện phòng khám",
+        "doctor" : "Bác sĩ",
+        "gooddoctor" : "Chọn bác sĩ giỏi",
+        "package": "Gói khám",
+        "general": "Khám sức khỏe tổng quát",
+        "vi": "Tiếng Việt",
+        "en": "Tiếng Anh"
+    },
+    "homesecsion" : {
+        "platform": "NỀN TẢN Y TẾ",
+        "healthcare" : "CHĂM SÓC SỨC KHỎE TOÀN DIỆN",
+        "findspecialty": "Tìm chuyên khoa",
+        "examination": "Khám",
+        "specialty":"chuyên khoa",
+        "remote" : "từ xa",
+        "general" : "tổng quát",
+        "test": "Xét nghiệm",
+        "medical" :{"1": "y học",
+                    "2": "y tế"
+                    },
+        "health" : "Sức khoẻ",
+        "mental" : "tinh thần",
+        "dentistry" : "nha khoa",
+        "package" : "Gói",
+        "surgery": "phẫu thuật",
+        "products" : "Sản phẩm",
+        "business" : "doanh nghiệp"
+    },
     "common": {
         "add": "Thêm",
         "edit": "Sửa",
