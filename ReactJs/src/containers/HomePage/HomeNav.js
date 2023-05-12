@@ -15,6 +15,14 @@ class HomeNav extends Component {
           className={
             this.props.isNavOpen ? "nav-container active" : "nav-container "
           }
+          onClick={(event) => {
+            console.log(event.target);
+            console.log(this.props.isNavOpen);
+            event.stopPropagation();
+            this.props.isNavOpen
+              ? event.target.classList.remove("active")
+              : event.target.classList.add("active");
+          }}
         >
           <div className="nav-content">
             <i
@@ -26,16 +34,16 @@ class HomeNav extends Component {
                 <a href="#">Trang chủ</a>
               </li>
               <li className="nav-list_item">
-                <a href="#">Trang chủ</a>
+                <a href="#">Cẩm nang</a>
               </li>
               <li className="nav-list_item">
-                <a href="#">Trang chủ</a>
+                <a href="#">Liên hệ hợp tác</a>
               </li>
               <li className="nav-list_item">
-                <a href="#">Trang chủ</a>
+                <a href="#">Gói chuyển đổi sô doanh nghiệp</a>
               </li>
               <li className="nav-list_item">
-                <a href="#">Trang chủ</a>
+                <a href="#">Tuyển dụng</a>
               </li>
             </ul>
           </div>

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import HomeHeader from "./HomeHeader";
 import HomeSecsion from "./HomeSecsion";
+import Specialty from "./Secsion/Specialty";
 class Homepage extends Component {
   constructor(props) {
     super(props);
@@ -13,6 +14,7 @@ class Homepage extends Component {
       <div>
         <HomeHeader />
         <HomeSecsion />
+        <Specialty />
       </div>
     );
   }

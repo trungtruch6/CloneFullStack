@@ -3,8 +3,11 @@ $lh: 1.313;
 $fontmain: "Helvetica", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font: 14px/1.5 "Montserrat", sans-serif;
 $colormain: #0071ba;
 $colorsub: #bb8d09;
+$colorodd: #f5f5f5;
+$coloreven: #fff;
 $common-text-color: white;
 $common-text-color-black: black;
 $common-btn-confirm: #185ba8;
@@ -16,6 +19,7 @@ $common-red: #d01a1d;
 $common-white: #fff;
 $common-orange: #ffac42;
 $border: #ccc;
+$borderbottom: 3px solid #efeef5;
 $text-in-light: #181818;
 
 $input-focus: #ffac42;
